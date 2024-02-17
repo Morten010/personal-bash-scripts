@@ -1,4 +1,3 @@
-
 # define the path to your folder
 script_dir=$(dirname $(readlink -f $0))
 
@@ -38,14 +37,16 @@ cd src
 
 echo 'import express from "express";
 
+const port = process.env.PORT || 3001
+
 const app = express();
 
 app.get("/", (req, res) => {
     return res.send("hello world")
 });
 
-app.listen(3000, () => {
-    console.log("Express server started on port 3000: http://localhost:3000");
+app.listen(port, () => {
+    console.log(`Express server started on port ${port}: http://localhost:${port}`);
 });
 ' > index.ts
 
