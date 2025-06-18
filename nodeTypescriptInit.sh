@@ -1,3 +1,4 @@
+#!/bin/bash
 # define the path to your folder
 script_dir=$(dirname $(readlink -f $0))
 
